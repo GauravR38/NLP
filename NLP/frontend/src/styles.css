@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #0f172a, #020617 45%, #0b1220 100%);
+  color: #e5e7eb;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 2.5rem 5vw 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #38bdf8, #a855f7, #f97316);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #9ca3af;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(16px);
+}
+
+.input-card textarea {
+  width: 100%;
+  min-height: 150px;
+  background: #020617;
+  border-radius: 0.75rem;
+  border: 1px solid #1e293b;
+  padding: 0.8rem 1rem;
+  color: #e5e7eb;
+  resize: vertical;
+}
+
+.input-card input[type="file"] {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px dashed #334155;
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5e7eb;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  gap: 1.5rem;
+}
+
+.skills-input {
+  margin-top: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background-image: linear-gradient(120deg, #22c55e, #0ea5e9, #a855f7);
+  background-size: 300% 300%;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #fecaca;
+  font-size: 0.9rem;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metrics-row.compact {
+  gap: 0.75rem;
+}
+
+.metric {
+  min-width: 120px;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.metric-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.progress {
+  width: 100%;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #020617;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22c55e, #eab308, #f97316);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.section-score {
+  margin-bottom: 1rem;
+}
+
+.jd-skill,
+.skill-gap {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+.tag.success {
+  background: rgba(22, 163, 74, 0.2);
+  color: #bbf7d0;
+}
+
+.tag.danger {
+  background: rgba(220, 38, 38, 0.15);
+  color: #fecaca;
+}
+
+.rewrite-block {
+  margin-bottom: 0.85rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  padding: 0.7rem 0.9rem;
+}
+
+.rewrite-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .input-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
